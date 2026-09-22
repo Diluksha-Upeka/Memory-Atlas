@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Atlas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">personal memory graph</p>
+          <h1>Talk to a Memory</h1>
+        </div>
+        <button id="demo-question" class="ghost-button">Try: “What have I been obsessed with lately?”</button>
+      </header>
+
+      <main class="main-panel">
+        <section class="query-panel card">
+          <label for="question-input">Your question</label>
+          <div class="prompt-row">
+            <input id="question-input" type="text" value="What have I been obsessed with lately?" />
+            <button id="ask-button">Ask</button>
+          </div>
+        </section>
+
+        <section class="response-layout">
+          <div class="answer-panel card">
+            <div class="section-header">
+              <p class="eyebrow">AI synthesis</p>
+              <h2>Answer</h2>
+            </div>
+            <div id="answer" class="answer-text"></div>
+          </div>
+
+          <div class="trail-panel card">
+            <div class="section-header">
+              <p class="eyebrow">why this answer</p>
+              <h2>Memory trail</h2>
+            </div>
+            <div id="trail" class="trail" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="memory-panel card">
+          <div class="section-header">
+            <p class="eyebrow">source memories</p>
+            <h2>Relevant snippets</h2>
+          </div>
+          <div id="memory-list" class="memory-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
